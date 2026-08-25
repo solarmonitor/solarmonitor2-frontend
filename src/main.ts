@@ -1,0 +1,11 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import '@/styles/main.css'
+
+import { createApp } from 'vue'
+
+import App from '@/App.vue'
+import { vTooltip } from '@/directives/tooltip'
+import { router } from '@/router'
+
+createApp(App).use(router).directive('tooltip', vTooltip).mount('#app')
