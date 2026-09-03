@@ -23,6 +23,7 @@ export const router = createRouter({
       component: () => import('@/views/FullDiskView.vue'),
       meta: { nav: 'fulldisk', dateNav: true },
     },
+    { path: '/detail', name: 'detail', component: () => import('@/views/DetailView.vue'), meta: { dateNav: true } },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0 }),
