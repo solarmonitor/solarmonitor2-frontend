@@ -30,6 +30,13 @@ export const router = createRouter({
       meta: { nav: 'ars', dateNav: true },
     },
     { path: '/detail', name: 'detail', component: () => import('@/views/DetailView.vue'), meta: { dateNav: true } },
+    {
+      path: '/events',
+      name: 'events',
+      component: () => import('@/views/EventsView.vue'),
+      meta: { nav: 'events', dateNav: true },
+    },
+    { path: '/flare', name: 'flare', component: () => import('@/views/FlareView.vue'), meta: { nav: 'events' } },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0 }),
