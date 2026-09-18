@@ -37,6 +37,18 @@ export const router = createRouter({
       meta: { nav: 'events', dateNav: true },
     },
     { path: '/flare', name: 'flare', component: () => import('@/views/FlareView.vue'), meta: { nav: 'events' } },
+    {
+      path: '/xrs',
+      name: 'xrs',
+      component: () => import('@/views/XrsView.vue'),
+      meta: { nav: 'xrs', dateNav: true, step: 'day' },
+    },
+    {
+      path: '/radio',
+      name: 'radio',
+      component: () => import('@/views/RadioView.vue'),
+      meta: { nav: 'radio', dateNav: true },
+    },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0 }),
