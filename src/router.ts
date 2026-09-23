@@ -49,6 +49,12 @@ export const router = createRouter({
       component: () => import('@/views/RadioView.vue'),
       meta: { nav: 'radio', dateNav: true },
     },
+    {
+      path: '/forecast',
+      name: 'forecast',
+      component: () => import('@/views/ForecastView.vue'),
+      meta: { nav: 'forecast', dateNav: true, step: 'day', rounding: 'nearest' },
+    },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0 }),
