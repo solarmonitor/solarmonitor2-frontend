@@ -55,6 +55,12 @@ export const router = createRouter({
       component: () => import('@/views/ForecastView.vue'),
       meta: { nav: 'forecast', dateNav: true, step: 'day', rounding: 'nearest' },
     },
+    {
+      path: '/orbits',
+      name: 'orbits',
+      component: () => import('@/views/OrbitsView.vue'),
+      meta: { nav: 'orbits', dateNav: true, rounding: 'nearest' },
+    },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
   scrollBehavior: () => ({ top: 0 }),
